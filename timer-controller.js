@@ -19,25 +19,25 @@ function TimerController () {
 	
 	function changeMode () {
 	    		
-	    if (current_timer !== timer_short_mode) {
+	    if (!(current_timer instanceof TimerShortMode)) {
 			current_timer = timer_short_mode;
-			timer_short_mode.render();
 	    } else {
 			current_timer = timer_full_mode;
-			timer_full_mode.render();
 	    }
+		
+		current_timer.render();
 	}
 	
     function changeDate (e) {
 		e.preventDefault();
 		
-	     if (current_timer !== timer_date_mode) {
+	     if (!(current_timer instanceof TimerDateMode)) {
 			current_timer = timer_date_mode;
-			timer_date_mode.render();
 	    } else {
 			current_timer = timer_short_mode;
-			timer_short_mode.render();
 	    }
+		
+		current_timer.render();
 	}
 	return this;
 }	

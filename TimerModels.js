@@ -17,12 +17,9 @@ function TimerShortMode (timer_el) {
 		
 	this.render = function () {
 	
-	    var today = new Date(),
-            hours = today.getHours(),
-	        minutes = today.getMinutes();
-			
-			hours = this.normalize(hours);
-	        minutes = this.normalize(minutes);
+	    var today = new Date(),		
+			hours = this.normalize(today.getHours()),
+	        minutes = this.normalize(today.getMinutes());
 			
 	    timer_el.innerHTML = hours + " : " + minutes;
     };	
@@ -37,13 +34,9 @@ function TimerFullMode (timer_el) {
 	this.render = function () {
 	
         var today = new Date(),
-            hours = today.getHours(),
-	        minutes = today.getMinutes(),
-	        seconds = today.getSeconds();
-			
-			hours = this.normalize(hours);
-	        minutes = this.normalize(minutes);
-	        seconds = this.normalize(seconds);
+            hours = this.normalize(today.getHours()),
+	        minutes = this.normalize(today.getMinutes()),
+	        seconds = this.normalize(today.getSeconds());
 			
 	    timer_el.innerHTML = hours + " : " + minutes + " : " + seconds; 
 	};
@@ -58,13 +51,9 @@ function TimerDateMode (timer_el) {
 	this.render = function () {
 	
 	    var today = new Date(),
-	        day = today.getDate(),
-	        month = today.getMonth() + 1,
-		    year = today.getFullYear().toString().substring(2,4);
-
-            day = this.normalize(day);
-	        month = this.normalize(month);
-		    year = this.normalize(year);
+	        day = this.normalize(today.getDate()),
+	        month = this.normalize(today.getMonth() + 1),
+		    year = this.normalize(today.getFullYear().toString().substring(2,4));
 			
 	    timer_el.innerHTML = month + " / " + day +" / " + year;
 	};	
