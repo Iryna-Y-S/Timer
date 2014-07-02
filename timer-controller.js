@@ -2,7 +2,6 @@ function TimerController () {
 
     var timer_el = document.getElementById("timer"),
 	
-		timer = new Timer(timer_el),
 		timer_short_mode = new TimerShortMode(timer_el),
 		timer_full_mode = new TimerFullMode(timer_el),
 		timer_date_mode = new TimerDateMode(timer_el),
@@ -15,7 +14,7 @@ function TimerController () {
 	timer_short_mode.render();	
 		
 	timer_el.addEventListener("click", changeMode, false);
-    timer_el.addEventListener("contextmenu", changeDate, false);
+    timer_el.addEventListener("contextmenu", changeDate, false);	
 	
 	function changeMode () {
 	    		
