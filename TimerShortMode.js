@@ -15,13 +15,6 @@ var TimerShortMode = (function (timer_el) {
     }
 	
 	Constructor.prototype = new Timer();
-	
-    Constructor.prototype.normalize = function (value) {		
-        if (value < 10) {
-		    value = "0" + value;
-		}
-	    return value;
-	};	
 
 return Constructor;
 })();
