@@ -8,13 +8,17 @@ function TimerController () {
 		current_timer = timer_short_mode,
 		
 		timer_interval = setInterval(function(){
-		        current_timer.render();
+		        render(current_timer);
 			}, 1000);
 			
-	timer_short_mode.render();	
+	render(timer_short_mode);	
 		
 	timer_el.addEventListener("click", changeMode, false);
-    timer_el.addEventListener("contextmenu", changeDate, false);	
+    timer_el.addEventListener("contextmenu", changeDate, false);
+
+    function render (current_timer) {
+	      timer_el.innerHTML = current_timer.getMode();
+	}	
 	
 	function changeMode () {
 	    		
@@ -24,7 +28,7 @@ function TimerController () {
 			current_timer = timer_full_mode;
 	    }
 		
-		current_timer.render();
+		render(current_timer);
 	}
 	
     function changeDate (e) {
@@ -36,7 +40,7 @@ function TimerController () {
 			current_timer = timer_short_mode;
 	    }
 		
-		current_timer.render();
+		render(current_timer);
 	}
 	return this;
 }	

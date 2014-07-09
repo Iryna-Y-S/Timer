@@ -5,7 +5,6 @@ var Timer = (function Timer(timer_el) {
 		return this;
 	}	
 	
-	Constructor.prototype.render = function(){};
     Constructor.prototype.normalize = function (value) {
 	    if (value < 10) {
 		    value = "0" + value;

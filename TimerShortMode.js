@@ -2,13 +2,13 @@ var TimerShortMode = (function (timer_el) {
 
     function Constructor (timer_el) {
 	
-	    this.render = function () {
+	    this.getMode = function () {
 		
 	        var today = new Date(),		
 		    hours = this.normalize(today.getHours()),
 	        minutes = this.normalize(today.getMinutes());
 	   
-	    timer_el.innerHTML = hours + " : " + minutes;
+	        return hours + " : " + minutes;
         };	
 	
 	    return this;	
