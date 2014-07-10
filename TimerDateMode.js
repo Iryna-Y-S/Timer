@@ -1,8 +1,8 @@
-var TimerDateMode = (function (timer_el) {
+var TimerDateMode = (function () {
 
-    function Constructor (timer_el) {
+    function Constructor () {
 		
-	    this.getMode = function () {
+	    this.getTime = function () {
 	
 	        var today = new Date(),
 	            day = this.normalize(today.getDate()),

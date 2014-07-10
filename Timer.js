@@ -1,7 +1,6 @@
-var Timer = (function Timer(timer_el) {
+var Timer = (function Timer() {
 
-    function Constructor (timer_el) {
-	
+    function Constructor () {
 		return this;
 	}	
 	

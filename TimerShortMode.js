@@ -1,8 +1,8 @@
-var TimerShortMode = (function (timer_el) {
+var TimerShortMode = (function () {
 
-    function Constructor (timer_el) {
+    function Constructor () {
 	
-	    this.getMode = function () {
+	    this.getTime = function () {
 		
 	        var today = new Date(),		
 		    hours = this.normalize(today.getHours()),

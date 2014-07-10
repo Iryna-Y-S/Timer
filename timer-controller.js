@@ -16,8 +16,8 @@ function TimerController () {
 	timer_el.addEventListener("click", changeMode, false);
     timer_el.addEventListener("contextmenu", changeDate, false);
 
-    function render (current_timer) {
-	      timer_el.innerHTML = current_timer.getMode();
+    function render () {
+	      timer_el.innerHTML = current_timer.getTime();
 	}	
 	
 	function changeMode () {
